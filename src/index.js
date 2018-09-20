@@ -16,6 +16,6 @@ var x2 = -b/ 2 / a -Math.pow(Math.pow(b,2) - 4 * a * c ,0.5) / 2 / a;
  var answer1 = Math.round(x1);
  var answer2 = Math.round(x2);
  
- if(answer1 <= answer2){console.log([answer1,answer2]);}
- if (answer1 >= answer2){console.log([answer2,answer1]);}
+ if(answer1 <= answer2){return([answer1,answer2]);}
+ if(answer1 >= answer2){return([answer2,answer1]);}
 }
