@@ -7,7 +7,7 @@ module.exports =  function solveEquation(equation){
  equationToArray[3] == "-" ? b = b* -1 : 0;
  equationToArray[7] == "-" ? c = c* -1 : 0;
  
-const discriminant = Math.pow(Math.pow(b,2) - 4 * a * c , 0.5) / 2 / a
+const discriminant = Math.pow(Math.pow(b,2) - 4 * a * c , 0.5) / 2 / a;
 let x1 = -b / 2 / a + discriminant;
 let x2 = -b / 2 / a - discriminant;
  
