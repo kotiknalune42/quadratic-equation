@@ -14,5 +14,9 @@ let x2 = -b / 2 / a - discriminant;
 let answer1 = Math.round(x1);
 let answer2 = Math.round(x2);
  
-answer1 <= answer2 ? return([answer1,answer2]) : return([answer2,answer1]);
+if (answer1 <= answer2) {
+  return ([answer1,answer2]);
+  } else {
+  return ([answer2, answer1]);
+  }
 }
