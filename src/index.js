@@ -1,21 +1,18 @@
 module.exports =  function solveEquation(equation){
-	var arr = (equation.split(' '));
-  
-  /* "-20", "*", "x^2", "-", "108797540", "*", "x", "-", "130011773690520" */
-  
- var a = Number(arr[0]);
- var b = Number(arr[4]);
- var c = Number(arr[8]);
+ let equationToArray = (equation.split(' '));	
+ let a = Number(equationToArray[0]),
+     b = Number(equationToArray[4]),
+     c = Number(equationToArray[8]);
+
+ equationToArray[3] == "-" ? b = b* -1 : 0;
+ equationToArray[7] == "-" ? c = c* -1 : 0;
  
- if(arr[3] == "-") {b = b*-1;}
- if(arr[7] == "-") {c = c*-1;}
+const discriminant = Math.pow(Math.pow(b,2) - 4 * a * c , 0.5) / 2 / a
+let x1 = -b / 2 / a + discriminant;
+let x2 = -b / 2 / a - discriminant;
  
-var x1 = -b/ 2 /a + Math.pow(Math.pow(b,2) - 4 * a * c , 0.5) / 2 / a;
-var x2 = -b/ 2 / a -Math.pow(Math.pow(b,2) - 4 * a * c ,0.5) / 2 / a;
+let answer1 = Math.round(x1);
+let answer2 = Math.round(x2);
  
- var answer1 = Math.round(x1);
- var answer2 = Math.round(x2);
- 
- if(answer1 <= answer2){return([answer1,answer2]);}
- if(answer1 >= answer2){return([answer2,answer1]);}
+answer1 <= answer2 ? return([answer1,answer2]) : return([answer2,answer1]);
 }
