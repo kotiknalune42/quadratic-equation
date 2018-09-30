@@ -1,5 +1,5 @@
 module.exports =  function solveEquation(equation){
- let equationToArray = (equation.split(' '));	
+ const equationToArray = (equation.split(' '));	
  let a = Number(equationToArray[0]),
      b = Number(equationToArray[4]),
      c = Number(equationToArray[8]);
